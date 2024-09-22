@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f8f9fa; /* Light background color */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container-fluid {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content area */
+    border-left: 1px solid #e0e0e0; /* Light border color */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align content */
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0; /* Light border */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    background-color: #f1f1f1; /* Light background for header */
+    box-sizing: border-box;
+}
+
+header .welcome h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #212529; /* Darker text color for better contrast */
+}
+
+header #theme-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+header #theme-toggle i {
+    font-size: 28px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+/* Profile Overview Section */
+.profile-overview {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.profile-card {
+    background: linear-gradient(135deg, #e0f1fa 30%, #FBE9E7 100%);
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border: 1px solid #d6d6d6; /* Slightly darker border */
+    width: 100%;
+    max-width: 500px; /* Limit the width of the profile card */
+    text-align: center; /* Center-align text in the profile card */
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border: 4px solid #e9ecef; /* Border around profile image */
+}
+
+.profile-info h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #212529; /* Dark text color */
+}
+
+.profile-info p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #495057; /* Slightly lighter text color for additional details */
+}
+
+/* Recent Activities Section */
+.recent-activities {
+    margin-bottom: 30px;
+}
+
+.recent-activities h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #007bff; /* Classic blue color */
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.recent-activities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-activities ul li {
+    background: linear-gradient(135deg, #e7bfb3 30%, #98d948 100%);
+    padding: 15px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+    border: 1px solid #d6d6d6; /* Slightly darker border */
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #495057; /* Slightly lighter text color */
+    text-align: center; /* Center-align text in the list items */
+}
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .main-content {
+    background-color: #1e1e1e;
+    color: #edd9d9;
+    border-left: 1px solid #333;
+}
+
+body.dark-mode header {
+    background-color: #171515;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode #theme-toggle i {
+    color: #e0e0e0;
+}
+
+body.dark-mode header .welcome h1 {
+    color: #ffffff; /* White color for header text in dark mode */
+    font-size: 36px; /* Increase font size for better visibility */
+    font-weight: bold; /* Make font bold for emphasis */
+}
+
+body.dark-mode .profile-card {
+    background: linear-gradient(145deg, #333, #1e1e1e);
+    color: #d8cfcf;
+}
+
+body.dark-mode .profile-info h3 {
+    color: #f0f0f0;
+    font-size: 26px; /* Increase font size */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+body.dark-mode .profile-info p{
+    color: #d6d6d6;
+    background: linear-gradient(145deg, #333, #1e1e1e);
+}
+body.dark-mode .recent-activities h2 {
+    color: #007bff; /* Classic blue color */
+    font-size: 30px; /* Larger heading for visibility */
+    font-weight: bold; /* Bold font for emphasis */
+}
+
+body.dark-mode .recent-activities ul li {
+    background: linear-gradient(145deg, #333, #1e1e1e);
+    color: #e0e0e0;
+    font-size: 20px; /* Increase font size */
+}
+
+/* Ensure link colors are visible */
+body.dark-mode a {
+    color: #1e90ff; /* Bright blue for links */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .main-content {
+        margin: 0;
+        padding: 20px;
+    }
+}
