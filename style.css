@@ -57,7 +57,8 @@ header, .hero {
 @media (max-width: 1024px) {
     /* Smaller width and new classy look */
     .custom-offcanvas {
-        width: 65%; /* Take only a portion of the screen */
+        width: 65%; 
+            height:60%;
         max-width: 350px; /* Limit the max width */
         height: 100vh;
         background-color: #ffffff; /* Cleaner white background */
@@ -103,7 +104,8 @@ header, .hero {
     /* Styling for very small screens */
     @media (max-width: 576px) {
         .custom-offcanvas {
-            width: 80%; /* Cover more of the screen */
+            width: 70%; /* Cover more of the screen */
+            height:60%;
         }
     }
 }
