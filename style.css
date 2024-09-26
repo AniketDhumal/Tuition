@@ -10,6 +10,124 @@ header, .hero {
     color: #333;
 }
 
+/* Default styling for larger screens (desktop view) */
+.custom-offcanvas {
+    width: 300px; /* Original width for large screens */
+    height: 100vh; /* Full height */
+    background-color: #f8f9fa; /* Keeping original background */
+    box-shadow: none; /* No shadow for original style */
+    border-right: none; /* No border for original style */
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif; /* Original font */
+}
+
+/* Styling for the menu items in larger screens */
+.custom-offcanvas .offcanvas-body ul {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.custom-offcanvas .offcanvas-body li {
+    padding: 15px 0;
+}
+
+.custom-offcanvas .offcanvas-body a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    display: block;
+}
+
+/* For large screens, transition effect remains */
+.custom-offcanvas.offcanvas-start {
+    transform: translateX(-300px);
+    transition: transform 0.3s ease;
+}
+
+.custom-offcanvas.show {
+    transform: translateX(0);
+}
+
+/* ---------------------------------------------- */
+/* Stylish design for small and tablet screens */
+/* ---------------------------------------------- */
+
+@media (max-width: 1024px) {
+    /* Smaller width and new classy look */
+    .custom-offcanvas {
+        width: 65%; /* Take only a portion of the screen */
+        max-width: 350px; /* Limit the max width */
+        height: 100vh;
+        background-color: #ffffff; /* Cleaner white background */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a floating effect */
+        border-right: 1px solid #ddd; /* Subtle border */
+        font-family: 'Poppins', sans-serif; /* Modern, stylish font */
+        transition: all 0.3s ease;
+    }
+
+    /* Enhanced hover effects for smaller screens */
+    .custom-offcanvas .offcanvas-body li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eaeaea; /* Dividers between items */
+        transition: background 0.3s ease;
+    }
+
+    .custom-offcanvas .offcanvas-body li:hover {
+        background-color: #f8f9fa; /* Light hover effect */
+    }
+
+    .custom-offcanvas .offcanvas-body a {
+        font-size: 18px;
+        color: #333;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        display: block;
+        transition: color 0.3s ease;
+    }
+
+    .custom-offcanvas .offcanvas-body a:hover {
+        color: #007bff; /* Highlight on hover */
+    }
+
+    .custom-offcanvas .offcanvas-header {
+        padding-bottom: 10px;
+        padding-top: 20px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        color: #333;
+    }
+
+    /* Styling for very small screens */
+    @media (max-width: 576px) {
+        .custom-offcanvas {
+            width: 80%; /* Cover more of the screen */
+        }
+    }
+}
+
+/* Close button hover effect */
+.btn-close {
+    transition: color 0.3s ease;
+}
+
+.btn-close:hover {
+    color: #ff6347; /* Change color on hover */
+}
+
+/* Transition effects for opening/closing the menu */
+.custom-offcanvas.offcanvas-start {
+    transform: translateX(-300px);
+    transition: transform 0.3s ease;
+}
+
+.custom-offcanvas.show {
+    transform: translateX(0); /* Open smoothly from the left */
+}
+
+
 /* General Dark Mode Styles */
 body.dark-mode {
     background-color: #121212; /* Very dark gray */
@@ -279,13 +397,21 @@ body.dark-mode .hero-enroll {
 #theme-toggle {
     cursor: pointer;
     position: absolute;
-    top: 20px;
+    top: 15px; /* Adjusted for better vertical centering */
     right: 20px;
+    margin-left: 15px; /* Add margin to create space from the menu buttons */
     background: none;
     border: none;
     font-size: 2rem;
-    color: #ff5722;
+    color: #ff5722; /* Primary color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
+
+#theme-toggle:hover {
+    color: #e64a19; /* Darker shade for hover effect */
+}
+
+
 
 /* Theme transition animation */
 body.theme-transition::before {
