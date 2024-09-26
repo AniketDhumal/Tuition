@@ -440,4 +440,18 @@ body.theme-transition::before {
 body.dark-mode img {
     filter: brightness(0.8);
 }
+/* Ensure navbar styling applies on larger screens */
+@media (min-width: 769px) {
+    .navbar {
+        flex-direction: row; /* Horizontal alignment on larger screens */
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Keep nav items in a row */
+    }
+
+    #theme-toggle {
+        margin-left: 15px; /* Space from menu buttons */
+    }
+}
 
