@@ -37,7 +37,7 @@ header, .hero {
 @media (max-width: 1024px) {
     .custom-offcanvas {
         width: 60%; /* Reduced width for smaller screens */
-        height: 60%; /* Cover 60% of the screen height */
+        height: 85%; /* Cover 60% of the screen height */
         background-color: #ffffff; /* Clean, bright white background */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
         border-radius: 10px; /* Smooth rounded corners */
@@ -109,7 +109,7 @@ header, .hero {
     @media (max-width: 576px) {
         .custom-offcanvas {
             width: 60%; /* 60% width for extra small screens */
-            height: 88%; /* 60% height */
+            height: 85%; /* 60% height */
             left: 20%; /* Centered horizontally */
             top: 20%; /* Centered vertically */
             padding: 10px; /* Reduced padding for smaller screens */
