@@ -21,25 +21,6 @@ header, .hero {
     font-family: 'Arial', sans-serif; /* Original font */
 }
 
-/* Styling for the menu items in larger screens */
-.custom-offcanvas .offcanvas-body ul {
-    padding-left: 0;
-    margin: 0;
-    list-style-type: none;
-}
-
-.custom-offcanvas .offcanvas-body li {
-    padding: 15px 0;
-}
-
-.custom-offcanvas .offcanvas-body a {
-    font-size: 18px;
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    display: block;
-}
-
 /* For large screens, transition effect remains */
 .custom-offcanvas.offcanvas-start {
     transform: translateX(-300px);
@@ -55,28 +36,37 @@ header, .hero {
 /* ---------------------------------------------- */
 
 @media (max-width: 1024px) {
-    /* Smaller width and new classy look */
+    /* Reduced width and height for tablets */
     .custom-offcanvas {
-        width: 65%; 
-            height:60%;
-        max-width: 350px; /* Limit the max width */
-        height: 100vh;
-        background-color: #ffffff; /* Cleaner white background */
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add a floating effect */
+        width: 70%; /* Take 70% of the screen width */
+        height: 60%; /* Take 60% of the screen height */
+        background-color: #ffffff; /* Clean white background */
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Add floating shadow */
         border-right: 1px solid #ddd; /* Subtle border */
         font-family: 'Poppins', sans-serif; /* Modern, stylish font */
         transition: all 0.3s ease;
+        top: 20%; /* Center vertically */
+        left: 15%; /* Center horizontally by offsetting from left */
+        overflow: hidden; /* Prevent content from overflowing */
     }
 
-    /* Enhanced hover effects for smaller screens */
+    /* Scrollable content within the offcanvas */
+    .custom-offcanvas .offcanvas-body {
+        height: 100%; /* Ensure the content takes full height */
+        overflow-y: auto; /* Make content scrollable if it exceeds the height */
+        padding-right: 15px; /* Add some padding to avoid scrollbar overlapping text */
+    }
+
+    /* Menu items styling for smaller screens */
+    .custom-offcanvas .offcanvas-body ul {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
     .custom-offcanvas .offcanvas-body li {
         padding: 15px 0;
         border-bottom: 1px solid #eaeaea; /* Dividers between items */
-        transition: background 0.3s ease;
-    }
-
-    .custom-offcanvas .offcanvas-body li:hover {
-        background-color: #f8f9fa; /* Light hover effect */
     }
 
     .custom-offcanvas .offcanvas-body a {
@@ -85,48 +75,26 @@ header, .hero {
         font-weight: 500;
         letter-spacing: 0.5px;
         display: block;
+    }
+
+    /* Close button hover effect */
+    .btn-close {
         transition: color 0.3s ease;
     }
 
-    .custom-offcanvas .offcanvas-body a:hover {
-        color: #007bff; /* Highlight on hover */
+    .btn-close:hover {
+        color: #ff6347; /* Change color on hover */
     }
 
-    .custom-offcanvas .offcanvas-header {
-        padding-bottom: 10px;
-        padding-top: 20px;
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        color: #333;
-    }
-
-    /* Styling for very small screens */
+    /* Adjustments for very small screens (phones) */
     @media (max-width: 576px) {
         .custom-offcanvas {
-            width: 70%; /* Cover more of the screen */
-            height:60%;
+            width: 70%; /* 70% of the screen width */
+            height: 60%; /* 60% of the screen height */
+            left: 15%; /* Center horizontally */
+            top: 20%; /* Center vertically */
         }
     }
-}
-
-/* Close button hover effect */
-.btn-close {
-    transition: color 0.3s ease;
-}
-
-.btn-close:hover {
-    color: #ff6347; /* Change color on hover */
-}
-
-/* Transition effects for opening/closing the menu */
-.custom-offcanvas.offcanvas-start {
-    transform: translateX(-300px);
-    transition: transform 0.3s ease;
-}
-
-.custom-offcanvas.show {
-    transform: translateX(0); /* Open smoothly from the left */
 }
 
 
