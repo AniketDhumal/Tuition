@@ -12,8 +12,8 @@ header, .hero {
 
 /* Default styling for larger screens (desktop view) */
 .custom-offcanvas {
-    width: 300px; /* Original width for large screens */
-    height: 100vh; /* Full height */
+    width: 65%; /* Original width for large screens */
+    height: 70%; /* Full height */
     background-color: var(--offcanvas-bg); /* Use a variable for background */
     box-shadow: none; /* No shadow for larger screens */
     transition: all 0.3s ease;
