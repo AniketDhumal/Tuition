@@ -34,7 +34,7 @@ header, .hero {
 /* Dark and light mode variables */
 :root {
     --offcanvas-bg: #f8f9fa; /* Light mode background */
-    --offcanvas-text: #222; /* Light mode text color */
+    --offcanvas-text: #ffffff; /* Light mode text color */
     --offcanvas-link-hover: #007bff; /* Light mode link hover */
     --btn-close-color: #888;
     --offcanvas-shadow: rgba(0, 0, 0, 0.1);
