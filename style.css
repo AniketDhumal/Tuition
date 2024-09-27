@@ -124,16 +124,6 @@ header, .hero {
         color: var(--offcanvas-text); /* Light/Dark mode text color */
         margin-bottom: 15px; /* Reduced margin */
     }
-    /* Default (Light Mode) Styling */
-.home-text {
-    color: #222; /* Dark color for light mode */
-}
-
-/* Dark Mode Styling */
-.dark-mode .home-text {
-    color: #ffffff; /* White text in dark mode */
-}
-
 
     /* Adjustments for phones */
     @media (max-width: 576px) {
@@ -485,3 +475,12 @@ body.dark-mode img {
     }
 }
 
+  /* Default (Light Mode) Styling */
+.home-text {
+    color: #222; /* Dark color for light mode */
+}
+
+/* Dark Mode Styling */
+.dark-mode .home-text {
+    color: #ffffff; /* White text in dark mode */
+}
