@@ -104,19 +104,57 @@ header, .hero {
         color: var(--offcanvas-link-hover); /* Classy hover effect */
     }
 
-    /* Close button styling */
-    .btn-close {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 1.2rem; /* Slightly smaller close button */
-        color: var(--btn-close-color); /* Light/Dark mode close button color */
-        transition: color 0.3s ease;
-    }
+   .btn-close {
+    width: 40px; /* Fixed width for consistency */
+    height: 40px; /* Fixed height for consistency */
+    border: none; /* Remove default border */
+    border-radius: 50%; /* Circular shape */
+    background: linear-gradient(135deg, #ff6b6b, #ff3d3d); /* Gradient background */
+    color: white; /* White text color */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    position: relative; /* Position relative for absolute positioning of the icon */
+}
 
-    .btn-close:hover {
-        color: #000; /* Darker color on hover */
-    }
+/* Close Icon Styling */
+.close-icon {
+    font-size: 1.5rem; /* Size of the cross */
+    position: absolute; /* Position absolutely within the button */
+    left: 50%; /* Center horizontally */
+    top: 50%; /* Center vertically */
+    transform: translate(-50%, -50%); /* Adjust to center */
+}
+
+/* Hover Effect */
+.btn-close:hover {
+    background: linear-gradient(135deg, #ff3d3d, #ff6b6b); /* Inverted gradient on hover */
+    transform: scale(1.05); /* Slight scale up for emphasis */
+}
+
+/* Focus Effect */
+.btn-close:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6); /* White glow for focus */
+}
+
+/* Close Button Styling for Dark Mode */
+body.dark-mode .btn-close {
+    background: linear-gradient(135deg, #333, #555); /* Dark gradient background */
+    color: #61dafb; /* Light blue text color */
+}
+
+body.dark-mode .btn-close:hover {
+    background: linear-gradient(135deg, #555, #333); /* Inverted dark gradient on hover */
+    transform: scale(1.05); /* Slight scale up for emphasis */
+}
+
+body.dark-mode .btn-close:focus {
+    box-shadow: 0 0 5px rgba(97, 218, 251, 0.5); /* Light blue glow for focus */
+}
 
     /* Headings within offcanvas */
     .custom-offcanvas h5 {
