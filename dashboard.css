@@ -35,9 +35,10 @@
     position: fixed;
     top: 0;
     left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #343a40;
+    width: 50%;
+    height: 75%;
+    background-color: white;
+    color: black;
     transition: left 0.3s ease;
     z-index: 1000;
     color: #fff;
@@ -65,7 +66,7 @@
 }
 
 .menu-list a {
-    color: #fff;
+    color: #000000;
     text-decoration: none;
     font-size: 18px;
     display: block;
@@ -162,6 +163,16 @@ body.dark-mode .chart-container {
     background-color: #333;
     border-radius: 8px;
     padding: 20px;
+}
+
+.sidebar h3{
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+
+body.dark-mode .sidebar{
+    background-color:black;
+    color: white;
 }
 
 /* Upcoming Assignments */
