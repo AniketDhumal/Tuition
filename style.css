@@ -14,10 +14,11 @@ header, .hero {
 .custom-offcanvas {
     width: 300px; /* Original width for large screens */
     height: 100vh; /* Full height */
-    background-color: #f8f9fa; /* Subtle background for large screens */
+    background-color: var(--offcanvas-bg); /* Use a variable for background */
     box-shadow: none; /* No shadow for larger screens */
     transition: all 0.3s ease;
     font-family: 'Arial', sans-serif;
+    color: var(--offcanvas-text); /* Variable for text color */
 }
 
 /* For large screens, transition effect remains */
@@ -30,6 +31,25 @@ header, .hero {
     transform: translateX(0);
 }
 
+/* Dark and light mode variables */
+:root {
+    --offcanvas-bg: #f8f9fa; /* Light mode background */
+    --offcanvas-text: #222; /* Light mode text color */
+    --offcanvas-link-hover: #007bff; /* Light mode link hover */
+    --btn-close-color: #888;
+    --offcanvas-shadow: rgba(0, 0, 0, 0.1);
+    --offcanvas-border: #ddd;
+}
+
+.dark-mode {
+    --offcanvas-bg: #2a2a2a; /* Dark mode background */
+    --offcanvas-text: #f1f1f1; /* Dark mode text color */
+    --offcanvas-link-hover: #66b2ff; /* Dark mode link hover */
+    --btn-close-color: #ccc;
+    --offcanvas-shadow: rgba(255, 255, 255, 0.1);
+    --offcanvas-border: #444;
+}
+
 /* ---------------------------------------------- */
 /* Classy and modern design for small screens */
 /* ---------------------------------------------- */
@@ -37,11 +57,11 @@ header, .hero {
 @media (max-width: 1024px) {
     .custom-offcanvas {
         width: 60%; /* Reduced width for smaller screens */
-        height: 85%; /* Cover 60% of the screen height */
-        background-color: #ffffff; /* Clean, bright white background */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        height: 85%; /* Cover 85% of the screen height */
+        background-color: var(--offcanvas-bg); /* Light/Dark mode background */
+        box-shadow: 0 4px 15px var(--offcanvas-shadow); /* Soft shadow */
         border-radius: 10px; /* Smooth rounded corners */
-        border: 1px solid #ddd; /* Light border for a sleek frame */
+        border: 1px solid var(--offcanvas-border); /* Light/Dark border */
         font-family: 'Poppins', sans-serif; /* Modern, elegant font */
         transition: all 0.3s ease;
         top: 20%; /* Center vertically */
@@ -72,7 +92,7 @@ header, .hero {
     /* Make the links smaller and classier */
     .custom-offcanvas .offcanvas-body a {
         font-size: 16px; /* Reduced size for better readability */
-        color: #333;
+        color: var(--offcanvas-text); /* Light/Dark mode text color */
         font-weight: 400; /* Lighter weight for a refined look */
         letter-spacing: 0.3px; /* Slight letter spacing */
         text-decoration: none; /* Remove underline */
@@ -81,7 +101,7 @@ header, .hero {
     }
 
     .custom-offcanvas .offcanvas-body a:hover {
-        color: #007bff; /* Classy blue hover effect */
+        color: var(--offcanvas-link-hover); /* Classy hover effect */
     }
 
     /* Close button styling */
@@ -90,7 +110,7 @@ header, .hero {
         top: 15px;
         right: 20px;
         font-size: 1.2rem; /* Slightly smaller close button */
-        color: #888;
+        color: var(--btn-close-color); /* Light/Dark mode close button color */
         transition: color 0.3s ease;
     }
 
@@ -101,7 +121,7 @@ header, .hero {
     /* Headings within offcanvas */
     .custom-offcanvas h5 {
         font-size: 18px; /* Reduced font size for a cleaner look */
-        color: #222; /* Bold, classy color */
+        color: var(--offcanvas-text); /* Light/Dark mode text color */
         margin-bottom: 15px; /* Reduced margin */
     }
 
@@ -109,7 +129,7 @@ header, .hero {
     @media (max-width: 576px) {
         .custom-offcanvas {
             width: 60%; /* 60% width for extra small screens */
-            height: 85%; /* 60% height */
+            height: 85%; /* 85% height */
             left: 20%; /* Centered horizontally */
             top: 20%; /* Centered vertically */
             padding: 10px; /* Reduced padding for smaller screens */
