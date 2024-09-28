@@ -10,6 +10,10 @@ header, .hero {
     color: #333;
 }
 
+.toggle-container{
+    margin-right: 20px;
+}
+
 /* Default styling for larger screens (desktop view) */
 .custom-offcanvas {
     width: 65%; /* Original width for large screens */
