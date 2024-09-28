@@ -438,7 +438,6 @@ header {
 body.dark-mode .menu-list a {
     color: #ddd;
     background-color: transparent;
-    box-shadow: none;
 }
 
 /* Dark Mode Menu List Link Hover */
