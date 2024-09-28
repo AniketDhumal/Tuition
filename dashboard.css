@@ -44,6 +44,11 @@
     color: #fff;
 }
 
+body.dark-mode .sidebar{
+    background: linear-gradient(135deg, #5E4B8A, #2e1513, #3F3F3F);
+
+}
+
 .sidebar-expanded {
     left: 0;
 }
