@@ -104,7 +104,9 @@ header, .hero {
         color: var(--offcanvas-link-hover); /* Classy hover effect */
     }
 
-   .btn-close {
+    /* General Close Button Styling */
+/* General Close Button Styling */
+.btn-close {
     width: 40px; /* Fixed width for consistency */
     height: 40px; /* Fixed height for consistency */
     border: none; /* Remove default border */
@@ -183,6 +185,8 @@ body.dark-mode .btn-close:focus {
     }
 }
 
+
+
 /* General Dark Mode Styles */
 body.dark-mode {
     background-color: #121212; /* Very dark gray */
@@ -205,7 +209,7 @@ body.dark-mode a:hover {
 }
 
 body.dark-mode .btn {
-    background-color: #444; /* Medium gray */
+    background-color: #060606; /* Medium gray */
     color: #e0e0e0;
     border: 1px solid #666;
 }
@@ -273,7 +277,7 @@ body.dark-mode .footer a {
     font-size: 1rem;
     font-weight: 500;
     margin-left: 15px;
-    color: #333;
+    color: #8b7171;
 }
 
 .navbar-nav .nav-link:hover {
@@ -513,6 +517,7 @@ body.dark-mode img {
     }
 }
 
- body.dark-mode .nav-link.active {
+body.dark-mode .nav-link.active {
     color: white; /* Change to white */
 }
+
