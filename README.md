@@ -148,27 +148,7 @@ Now open: `http://localhost:3000`
 
 ## 📊 System Architecture
 
-```mermaid
-graph TD
-  A[Frontend: HTML/JS] -->|HTTP Requests| B[Express Routes]
-  B --> C[Controllers]
-  C --> D[Models (Mongoose)]
-  D --> E[(MongoDB Database)]
 
-  subgraph Frontend
-  A
-  end
-
-  subgraph Backend
-  B
-  C
-  D
-  end
-
-  subgraph Database
-  E
-  end
-```
 
 - **Frontend** → Sends requests via fetch() to API endpoints  
 - **Routes** → Define REST API paths (`/api/v1/...`)  
