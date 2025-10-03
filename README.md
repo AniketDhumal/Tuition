@@ -74,7 +74,7 @@ project-root/
 
 ### 1️⃣ Clone the repo
 ```bash
-git clone https://github.com/your-username/e-learning-system.git
+git clone https://github.com/AniketDhumal/Tuition.git
 cd e-learning-system
 ```
 
