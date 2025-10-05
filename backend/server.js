@@ -131,9 +131,14 @@ const authLimiter = rateLimit({
   message: 'Too many login attempts from this IP, please try again after an hour'
 });
 
+app.get("/", (_req, res) => {
+  res.send("🌤️ Weather API backend is running.");
+});
+
 app.use('/api/v1/auth/login', authLimiter);
 app.use('/api/v1/auth/register', authLimiter);
 app.use('/api/', apiLimiter);
+
 
 // Prevent http param pollution
 app.use(hpp());
@@ -228,4 +233,5 @@ process.on('SIGTERM', () => {
   server.close(() => {
     console.log('Process terminated');
   });
+
 });
