@@ -1,3 +1,7 @@
+const API_BASE_URL =
+  (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) ||
+  "http://localhost:5000/api/v1";
+  
 document.addEventListener('DOMContentLoaded', () => {
   const sunIcon = document.getElementById('sun-icon');
   const moonIcon = document.getElementById('moon-icon');
@@ -90,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const res = await fetch('https://tuition-c67n.onrender.com/api/v1/auth/register', {
+        const res = await fetch(`${API_BASE_URL}/auth/register`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
