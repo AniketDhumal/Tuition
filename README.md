@@ -41,12 +41,10 @@ It supports user & admin roles, course management, resource sharing, results tra
 ```
 project-root/
 ├── frontend/
-│   ├── index.html
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html
-│   ├── admin.html
-│   ├── profile.html
+│   ├── templates
+│   ├── css
+    └── package.json
+    └── package-lock.json
 │   └── js/
 │       ├── index.js
 │       ├── login.js
@@ -54,6 +52,7 @@ project-root/
 │       ├── dashboard.js
 │       ├── resources.js
 │       └── ...
+     
 │
 ├── backend/
 │   ├── controllers/
