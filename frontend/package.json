@@ -1,14 +1,11 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Static HTML/CSS/JS site",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "echo \"No start for static site\" && exit 0"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
