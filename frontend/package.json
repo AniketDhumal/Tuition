@@ -1,11 +1,12 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "Static HTML/CSS/JS site",
+  "main": "index.html",
   "scripts": {
-    "start": "echo \"No start for static site\" && exit 0"
+    "start": "echo 'Static site — no start command needed'"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
