@@ -1,4 +1,6 @@
-
+const API_BASE_URL =
+  (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) ||
+  "http://localhost:5000/api/v1";
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault();
     
@@ -8,7 +10,7 @@ document.querySelector('form').addEventListener('submit', async (e) => {
     };
   
     try {
-      const response = await fetch('http://localhost:5000/api/v1/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
