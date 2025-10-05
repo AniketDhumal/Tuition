@@ -1,4 +1,6 @@
-const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_BASE_URL =
+  (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) ||
+  "http://localhost:5000/api/v1";
 
 // Initialize with sequential loading to prevent rate limiting
 $(document).ready(function() {
