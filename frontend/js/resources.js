@@ -1,7 +1,6 @@
-// resources.js - Complete Frontend Implementation
-
-// Base API configuration
-const API_BASE_URL = 'http://localhost:5000/api/v1';
+const API_BASE_URL =
+  (window.APP_CONFIG && window.APP_CONFIG.API_BASE_URL) ||
+  "http://localhost:5000/api/v1";
 
 document.addEventListener('DOMContentLoaded', function() {
     // Current page for pagination
